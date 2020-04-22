@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		74945F8F2450E4010048F4B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74945F8D2450E4010048F4B2 /* Main.storyboard */; };
 		74945F912450E4030048F4B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74945F902450E4030048F4B2 /* Assets.xcassets */; };
 		74945F942450E4030048F4B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74945F922450E4030048F4B2 /* LaunchScreen.storyboard */; };
+		74945F9D2450E4FA0048F4B2 /* PixelKit in Frameworks */ = {isa = PBXBuildFile; productRef = 74945F9C2450E4FA0048F4B2 /* PixelKit */; };
+		74945FA12450E5000048F4B2 /* PixelKitShaders-iOS-Simulator.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 74945F9E2450E5000048F4B2 /* PixelKitShaders-iOS-Simulator.metallib */; };
+		74945FA22450E5000048F4B2 /* PixelKitShaders-iOS.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 74945F9F2450E5000048F4B2 /* PixelKitShaders-iOS.metallib */; };
+		74945FA32450E5000048F4B2 /* PixelKitShaders-macCatalyst.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 74945FA02450E5000048F4B2 /* PixelKitShaders-macCatalyst.metallib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		74945F902450E4030048F4B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74945F932450E4030048F4B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74945F952450E4030048F4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74945F9E2450E5000048F4B2 /* PixelKitShaders-iOS-Simulator.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = "PixelKitShaders-iOS-Simulator.metallib"; sourceTree = "<group>"; };
+		74945F9F2450E5000048F4B2 /* PixelKitShaders-iOS.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = "PixelKitShaders-iOS.metallib"; sourceTree = "<group>"; };
+		74945FA02450E5000048F4B2 /* PixelKitShaders-macCatalyst.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = "PixelKitShaders-macCatalyst.metallib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74945F9D2450E4FA0048F4B2 /* PixelKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,9 @@
 				74945F902450E4030048F4B2 /* Assets.xcassets */,
 				74945F922450E4030048F4B2 /* LaunchScreen.storyboard */,
 				74945F952450E4030048F4B2 /* Info.plist */,
+				74945F9E2450E5000048F4B2 /* PixelKitShaders-iOS-Simulator.metallib */,
+				74945F9F2450E5000048F4B2 /* PixelKitShaders-iOS.metallib */,
+				74945FA02450E5000048F4B2 /* PixelKitShaders-macCatalyst.metallib */,
 			);
 			path = PIXTwitterTest;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = PIXTwitterTest;
+			packageProductDependencies = (
+				74945F9C2450E4FA0048F4B2 /* PixelKit */,
+			);
 			productName = PIXTwitterTest;
 			productReference = 74945F842450E4010048F4B2 /* PIXTwitterTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 74945F7B2450E4010048F4B2;
+			packageReferences = (
+				74945F9B2450E4FA0048F4B2 /* XCRemoteSwiftPackageReference "PixelKit" */,
+			);
 			productRefGroup = 74945F852450E4010048F4B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +145,9 @@
 				74945F942450E4030048F4B2 /* LaunchScreen.storyboard in Resources */,
 				74945F912450E4030048F4B2 /* Assets.xcassets in Resources */,
 				74945F8F2450E4010048F4B2 /* Main.storyboard in Resources */,
+				74945FA32450E5000048F4B2 /* PixelKitShaders-macCatalyst.metallib in Resources */,
+				74945FA12450E5000048F4B2 /* PixelKitShaders-iOS-Simulator.metallib in Resources */,
+				74945FA22450E5000048F4B2 /* PixelKitShaders-iOS.metallib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74945F9B2450E4FA0048F4B2 /* XCRemoteSwiftPackageReference "PixelKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hexagons/PixelKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74945F9C2450E4FA0048F4B2 /* PixelKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74945F9B2450E4FA0048F4B2 /* XCRemoteSwiftPackageReference "PixelKit" */;
+			productName = PixelKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74945F7C2450E4010048F4B2 /* Project object */;
 }

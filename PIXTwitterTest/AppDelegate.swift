@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import PixelKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        #if targetEnvironment(macCatalyst)
+        let pixelKitMetalLibName: String = "PixelKitShaders-macCatalyst"
+        #elseif os(iOS) && targetEnvironment(simulator)
+        let pixelKitMetalLibName: String = "PixelKitShaders-iOS-Simulator"
+        #elseif os(iOS)
+        let pixelKitMetalLibName: String = "PixelKitShaders-iOS"
+        #endif
+        pixelKitMetalLibURL = Bundle.main.url(forResource: pixelKitMetalLibName, withExtension: "metallib")!
+        
         return true
     }
 
